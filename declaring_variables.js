@@ -1,3 +1,4 @@
+//Exercises to master JavaScript
 // Declaring different variables of different data types
 let firstName = 'Ana Lucia' // first name of a person
 let lastName = 'Pelayo' // last name of a person
