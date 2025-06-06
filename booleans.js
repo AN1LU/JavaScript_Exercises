@@ -119,9 +119,17 @@ console.log(!(4 === '4') )
 // Use the Date object to do the following activities
 
 // What is the year today?
+const now = new Date()
+console.log(now.getFullYear())
 // What is the month today as a number?
+console.log(now.getMonth())
 // What is the date today?
+console.log(now)
 // What is the day today as a number?
+console.log(now.getDate())
 // What is the hours now?
+console.log(now.getHours())
 // What is the minutes now?
+console.log(now.getMinutes())
 // Find out the numbers of seconds elapsed from January 1, 1970 to now.
+console.log(now.getTime())
