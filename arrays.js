@@ -84,16 +84,71 @@ console.log(itCompanies[0]+', '+itCompanies[1]+','+itCompanies[2]+', '+itCompani
 // }
 
 // Filter out companies which have more than one 'o' without the filter method
-
+switch (itCompanies){
+    case itCompanies[0]:
+        count = itCompanies[0].split('o').length-1
+        if(count > 1){
+            console.log(itCompanies[0])
+        }
+        break
+    case itCompanies[1]:
+        count = itCompanies[1].split('o').length-1
+        if(count > 1){
+            console.log(itCompanies[1])
+        }
+        break
+    case itCompanies[2]:
+        count = itCompanies[2].split('o').length-1
+        if(count > 1){
+            console.log(itCompanies[2])
+        }
+        break
+    case itCompanies[3]:
+        count = itCompanies[3].split('o').length-1
+        if(count > 1){
+            console.log(itCompanies[3])
+        }
+        break
+    case itCompanies[4]:
+        count = itCompanies[4].split('o').length-1
+        if(count > 1){
+            console.log(itCompanies[4])
+        }
+        break
+    case itCompanies[5]:
+        count = itCompanies[5].split('o').length-1
+        if(count > 1){
+            console.log(itCompanies[5])
+        }
+        break
+    case itCompanies[6]:
+        count = itCompanies[6].split('o').length-1
+        if(count > 1){
+            console.log(itCompanies[6])
+        }
+        break
+}
 
 // // Sort the array using sort() method
 console.log(itCompanies.sort())
 // Reverse the array using reverse() method
 console.log(itCompanies.reverse())
 // Slice out the first 3 companies from the array
+console.log(itCompanies.slice(0,3))
 // Slice out the last 3 companies from the array
+console.log(itCompanies.slice(4,7))
 // Slice out the middle IT company or companies from the array
+console.log(itCompanies.slice(3,4))
 // Remove the first IT company from the array
+console.log(itCompanies.shift(0))
 // Remove the middle IT company or companies from the array
+console.log(itCompanies.shift(4))
 // Remove the last IT company from the array
+console.log(itCompanies.shift(7))
 // Remove all IT companies
+itCompanies.pop()
+itCompanies.pop()
+itCompanies.pop()
+itCompanies.pop()
+itCompanies.pop()
+console.log(itCompanies)
