@@ -45,14 +45,51 @@ console.log('Company 4: '+itCompanies[3])
 console.log('Company 5: '+itCompanies[4])
 console.log('Company 6: '+itCompanies[5])
 console.log('Company 7: '+itCompanies[6])
-// Change each company name to uppercase one by one and print them out
-console.log('Company 1: '+itCompanies.toUpperCase)
 
+// Change each company name to uppercase one by one and print them out
+console.log('Company 1: '+itCompanies[0].toUpperCase())
+console.log('Company 2: '+itCompanies[1].toUpperCase())
+console.log('Company 3: '+itCompanies[2].toUpperCase())
+console.log('Company 4: '+itCompanies[3].toUpperCase())
+console.log('Company 5: '+itCompanies[4].toUpperCase())
+console.log('Company 6: '+itCompanies[5].toUpperCase())
+console.log('Company 7: '+itCompanies[6].toUpperCase())
 // Print the array like as a sentence: Facebook, Google, Microsoft, Apple, IBM,Oracle and Amazon are big IT companies.
+console.log(itCompanies[0]+', '+itCompanies[1]+','+itCompanies[2]+', '+itCompanies[3]+', '+itCompanies[4]+', '+itCompanies[5]+', '+itCompanies[6])
 // Check if a certain company exists in the itCompanies array. If it exist return the company else return a company is not found
+// let certainCompany = window.prompt('Enter the name of a company: ')
+
+// switch (itCompanies){
+//     case itCompanies[0]:
+//         console.log('Your company is in my system. Company:' + itCompanies[0])
+//         break
+//     case itCompanies[1]:
+//         console.log('Your company is in my system. Company:' + itCompanies[1])
+//         break
+//     case itCompanies[2]:
+//         console.log('Your company is in my system. Company:' + itCompanies[2])
+//         break
+//     case itCompanies[3]:
+//         console.log('Your company is in my system. Company:' + itCompanies[3])
+//         break
+//     case itCompanies[4]:
+//         console.log('Your company is in my system. Company:' + itCompanies[4])
+//         break
+//     case itCompanies[5]:
+//         console.log('Your company is in my system. Company:' + itCompanies[5])
+//         break
+//     case itCompanies[6]:
+//         console.log('Your company is in my system. Company:' + itCompanies[6])
+//         break
+// }
+
 // Filter out companies which have more than one 'o' without the filter method
-// Sort the array using sort() method
+
+
+// // Sort the array using sort() method
+console.log(itCompanies.sort())
 // Reverse the array using reverse() method
+console.log(itCompanies.reverse())
 // Slice out the first 3 companies from the array
 // Slice out the last 3 companies from the array
 // Slice out the middle IT company or companies from the array
