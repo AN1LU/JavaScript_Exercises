@@ -1,7 +1,7 @@
 //Exercises to master JavaScript
 //DAY 6/30
 
-{
+// {
 // --------------------------------------------
 // For loop structure
 
@@ -39,7 +39,7 @@
 // --------------------------------------------
 //Continue 
 //This is used to skip certain iterations
-}
+//}
 const countries = [
   'Albania',
   'Bolivia',
@@ -96,6 +96,10 @@ do{
     i--
 }while (i>=0)
 // Iterate 0 to n using for loop
+// let n = window.prompt('Ingrese el numero maximo del for:')
+// for (let i = 0; i >= n; i++){
+//     console.log('for '+i)
+// }
 
 // Write a loop that makes the following pattern using console.log():
 
@@ -106,6 +110,10 @@ do{
 //     #####
 //     ######
 //     #######
+let string = '#'
+for (i = 0 ; i<=7 ; i++){
+    console.log(string.repeat(i))
+}
 // Use loop to print the following pattern:
 
 // 0 x 0 = 0
@@ -134,9 +142,17 @@ do{
 //  9    81    729
 //  10   100   1000
 // Use for loop to iterate from 0 to 100 and print only even numbers
-
+for(i=0; i<=100; i++){
+    if(i%2==0){
+        console.log(i)
+    }
+}
 // Use for loop to iterate from 0 to 100 and print only odd numbers
-
+for(i=0; i<=100; i++){
+    if(i%2!=0){
+        console.log(i)
+    }
+}
 // Use for loop to iterate from 0 to 100 and print only prime numbers
 
 // Use for loop to iterate from 0 to 100 and print the sum of all numbers.
