@@ -26,4 +26,18 @@ let user = {
     }
 };
 
+// call out object
 user.sayHi();
+
+function Animal(name, type){
+    this.name = name,
+    this.type = type,
+    this.sound = function(){
+        console.log(this.name + " makes a sound");
+    };
+}
+
+let rooster = new Animal("Brat", "Rooster");
+rooster.sound();
+
+
