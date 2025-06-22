@@ -58,4 +58,3 @@ class Car{
 
 let myCar = new Car("Toyota", "Red", "Automatic", "Tacoma", "2026")
 myCar.turnOn();
-
