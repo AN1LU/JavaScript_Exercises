@@ -40,4 +40,22 @@ function Animal(name, type){
 let rooster = new Animal("Brat", "Rooster");
 rooster.sound();
 
+class Car{
+    //Constructors are similar to attributes but instead of being for a specific object is more like a template for future usage
+    constructor(brand, color, transmision, model, year){
+        this.brand = brand;
+        this.color = color;
+        this.transmision = transmision;
+        this.model = model;
+        this.year = year;
+    }
+
+    //method
+    turnOn(){
+        console.log(`Vehicle ${this.brand} ${this.model} ${this.year} was turned on`);
+    }
+}
+
+let myCar = new Car("Toyota", "Red", "Automatic", "Tacoma", "2026")
+myCar.turnOn();
 
