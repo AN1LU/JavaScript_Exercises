@@ -1,26 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solar System</title>
-    
+  <meta charset="UTF-8">
+  <title>Solar System</title>
+  <style>
+    .form {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      font-family: "Arial";
+    }
+
+    button, select, input {
+      padding: 10px 20px;
+      font-size: medium;
+      font-family: Arial;
+    }
+
+    .result {
+      text-align: center;
+      margin-top: 30px;
+      font-size: x-large;
+      font-weight: bold;
+      color: white;
+      font-family: Arial;
+    }
+
+    .planet-img {
+      display: block;
+      margin: 20px auto;
+      max-width: 200px;
+      height: auto;
+    }
+  </style>
 </head>
 <body background="space.jpeg">
-    <h1 style="color: white; font-family: Arial; text-align: center;">Calculate a weight of an object on a planet</h1>
-    <div>
-        <input type="text" placeholder="Mass in Kilograms"> 
-        <select name="planet" id="planet">
-            <option value="Mercury">Mercury</option>
-            <option value="Venus">Venus</option>
-            <option value="Earth">Earth</option>
-            <option value="Mars">Mars</option>
-            <option value="Jupiter">Jupiter</option>
-            <option value="Saturn">Saturn</option>
-            <option value="Urane">Urane</option>
-            <option value="Neptune">Neptune</option>
-        </select>
-        <button >Calculate</button>
-    </div>
+  <h1 style="color: white; text-align: center; font-family: Arial;">Calculate the weight of an object on a planet</h1>
+
+  <div class="form">
+    <input id="massInput" type="number" placeholder="Mass in Kilograms">
+    <select id="planetSelect">
+      <option value="Mercury">Mercury</option>
+      <option value="Venus">Venus</option>
+      <option value="Earth">Earth</option>
+      <option value="Mars">Mars</option>
+      <option value="Jupiter">Jupiter</option>
+      <option value="Saturn">Saturn</option>
+      <option value="Uranus">Uranus</option>
+      <option value="Neptune">Neptune</option>
+    </select>
+    <button onclick="calculateWeight()">Calculate</button>
+  </div>
+
+  <div id="result" class="result"></div>
+  <img id="planetImage" class="planet-img" src="" alt="Planet Image" style="display: none;">
+
+  <script>
+    function calculateWeight() {
+      const mass = parseFloat(document.getElementById('massInput').value);
+      const planet = document.getElementById('planetSelect').value;
+      const resultDiv = document.getElementById('result');
+      const planetImg = document.getElementById('planetImage');
+
+      if (isNaN(mass)) {
+        resultDiv.textContent = "Please enter a valid mass.";
+        planetImg.style.display = "none";
+        return;
+      }
+
+      const gravity = {
+        Mercury: 3.7,
+        Venus: 8.87,
+        Earth: 9.81,
+        Mars: 3.37,
+        Jupiter: 24.79,
+        Saturn: 10.44,
+        Uranus: 8.69,
+        Neptune: 11.15
+      };
+
+      const images = {
+        Mercury: "https://upload.wikimedia.org/wikipedia/commons/4/4a/Mercury_in_true_color.jpg",
+        Venus: "https://upload.wikimedia.org/wikipedia/commons/e/e5/Venus-real_color.jpg",
+        Earth: "https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg",
+        Mars: "https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg",
+        Jupiter: "https://upload.wikimedia.org/wikipedia/commons/e/e2/Jupiter.jpg",
+        Saturn: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn_during_Equinox.jpg",
+        Uranus: "https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg",
+        Neptune: "https://upload.wikimedia.org/wikipedia/commons/5/56/Neptune_Full.jpg"
+      };
+
+      const planetGravity = gravity[planet];
+      const weight = mass * planetGravity;
+
+      resultDiv.textContent = `The weight on ${planet} is ${weight.toFixed(2)} N.`;
+
+      planetImg.src = images[planet];
+      planetImg.alt = `Image of ${planet}`;
+      planetImg.style.display = "block";
+    }
+  </script>
 </body>
 </html>
