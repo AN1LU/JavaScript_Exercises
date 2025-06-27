@@ -40,6 +40,20 @@
             padding-left: 3%;
             padding-right: 3%;
         }
+        .buttons{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            
+        }
+
+        button{
+            padding: 100px 100px;
+            font-size: x-large;
+            font-family: sans-serif;
+        }
     </style>
 </head>
 <body>
@@ -50,19 +64,49 @@
     </div>
 
     <div class="introduction">
-        <p>I'm Ana Lucia Pelayo. I am a software engineering student in my last semester of the carreer. I am 23 years old. I love coding, I've coding since I was 17 years old. I am currently working on a 30 Day JavaScript Challenge, I've been learning JavaScript with the exercises of Asabeneh Yetayeh's repository on github. I started learning JavaScript last year in videogame design class at school.</p>
+        <p>I'm Ana Lucia Pelayo. I am a software engineering student in my last semester of the carreer. I am 22 years old. I love coding, I've coding since I was 17 years old.</p>
+        <p>I am currently working on a 30 Day JavaScript Challenge, I've been learning JavaScript with the exercises of Asabeneh Yetayeh's repository on github. I started learning JavaScript last year in videogame design class at school.</p>
     </div>
 
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <div class="buttons">
+        <button>30 days of JavaScript</button>
+        <button>Python for Big Data</button>
+        <button>Java Exercises</button>
+    </div>
 
+    <div class="introduction">
+        <p>The technologies I know <span class="technologies"></span></p>
+    </div>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed(".auto-type", {
-            strings: ["a girl in STEM", "coding", "a software engineer"],
-            typeSpeed: 150,
-            backSpeed: 150,
+            strings: ["a girl in STEM", "coding", "a software engineer", ],
+            typeSpeed: 100,
+            backSpeed: 100,
             loop: true
         })
     </script>
-
+    <script>
+        var typed= new Typed(".technologies",{
+            strings: ["Python", 
+            "Java", 
+            "JavaScript", 
+            "PowerShell",
+            "SQL", 
+            "R", 
+            "Power Apps", 
+            "Power Automate", 
+            "HTML", 
+            "CSS", 
+            "C#",
+            "C++", 
+            "PowerBI"
+        ],
+            typeSpeed: 500,
+            backSpeed: 500,
+            loop: true
+        })
+    </script>
+    
 </body>
 </html>
