@@ -10,4 +10,3 @@ fetch(url + '?access_key=' + access_key) // fetching the API data
   })
   .catch(error => console.error(error)) // handling error if something wrong happens
 
-  
